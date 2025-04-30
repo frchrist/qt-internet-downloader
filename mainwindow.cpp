@@ -1,7 +1,8 @@
 #include "mainwindow.h"
 
-#include <QtWidgets/QMenuBar>
-#include <QtWidgets/QDesktopWidget>
+#include <QMenuBar>
+#include <QMainWindow>
+//#include <QtWidgets/QDesktopWidget>
 #include <QPropertyAnimation>
 #include <QApplication>
 #include <QRect>

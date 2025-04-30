@@ -56,9 +56,9 @@ QString DownloadProcess::timeHuman(const int secondsToFinishDownload){
 }
 
 void DownloadProcess::downloadProgress(qint64 received, qint64 total){
-    double downloadSpeedInfo = received * 1000.0 / downloadTime.elapsed();
+    double downloadSpeedInfo = received * 1000.0 / 10000; /* downloadTime.interval(); */
     double downloadSpeed  = downloadSpeedInfo;
-    int progress = (100*received)/total;
+    int progress = (100*received)/ 1000 /* total */;
     size = sizeHuman(total);
 
     QString unit;
@@ -71,8 +71,8 @@ void DownloadProcess::downloadProgress(qint64 received, qint64 total){
         unit = "MB/s";
     }
 
-    QString speedFormat;
-    speedFormat.sprintf("%6.2f", downloadSpeedInfo);
+    QString speedFormat = QString::number(downloadSpeedInfo);
+    // speedFormat.sprintf("%6.2f", downloadSpeedInfo);
 
     QString speed = speedFormat+ " " + unit;
 

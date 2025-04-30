@@ -7,7 +7,7 @@
 #include <QtNetwork/QNetworkRequest>
 #include <QtNetwork/QNetworkAccessManager>
 #include <QObject>
-#include <QTime>
+#include <QTimer>
 #include <QUrl>
 
 
@@ -30,7 +30,7 @@ private:
     DownloadTable *dataModel = nullptr;
     QUrl url;
     QString size;
-    QTime downloadTime;
+    QTimer downloadTime;
     QNetworkReply *currentDownload = nullptr;
     QNetworkAccessManager *manager = nullptr;
 };

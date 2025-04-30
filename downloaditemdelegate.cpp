@@ -35,7 +35,7 @@ void DownloadItemDelegate::paint(QPainter *painter,
         cursor.select(QTextCursor::Document);
         cursor.mergeCharFormat(format);
 
-        customText.font.setWeight(600);
+        customText.font.setWeight(QFont::Weight::Bold);
         customText.palette.setColor(QPalette::HighlightedText, "#D19F49");
         customText.palette.setColor(QPalette::Highlight, "#0995DB");
 

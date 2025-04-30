@@ -13,10 +13,10 @@ struct singleDownloadInfo{
     QString speed;
     QString timeLeft;
 
-    bool operator==(const singleDownloadInfo &);
+    bool operator==(const singleDownloadInfo &) const;
 };
 
-inline bool singleDownloadInfo::operator ==(const singleDownloadInfo & download){
+inline bool singleDownloadInfo::operator ==(const singleDownloadInfo & download) const{
     return this->name == download.name;
 }
 

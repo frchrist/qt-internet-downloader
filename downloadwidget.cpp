@@ -250,12 +250,13 @@ void DownloadWidget::loadSession(){
         downloadTable->insertRows(0, row, QModelIndex());
 
         QModelIndex index;
+        /*
         REP(i, row){
                 REP(j, column){
                     index = downloadTable->index(i, j);
                     downloadTable->setData(index, stream, Qt::EditRole);
             }
-        }
+        } */
 
         while(!stream.atEnd()){
             QUrl url;
